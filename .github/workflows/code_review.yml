@@ -1,27 +1,26 @@
-name: AI Code Reviewer
+name: Code Review with OpenAI
 
 on:
-  # push:
-  #   branches:
-  #     - main
-  #     - '**' # (옵션) 모든 브랜치 포함
   pull_request:
     types:
       - opened
       - synchronize
-      - edited # (옵션: PR 편집 시에도 리뷰)
+
 permissions: write-all
+
 jobs:
-  review:
+  code_review:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: AI Code Reviewer
         uses: inmo-jang/ai-codereviewer@main
         with:
-          OCTOKIT_TOKEN: ${{ secrets.OCTOKIT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_API_MODEL: "gpt-3.5-turbo" # "gpt-4" # Optional: defaults to "gpt-4"
-          exclude: "**/*.json, **/*.md" # Optional: exclude patterns separated by commas
+          OPENAI_API_MODEL: "gpt-4o-mini"
+          REVIEW_MAX_COMMENTS: 5 # Optional: defaults to 10
+          APPROVE_REVIEWS: true # Optional: defaults to false
+          exclude: "yarn.lock,dist/**"
