@@ -1,4 +1,4 @@
-name: Code Review
+name: ChatGPT-CodeReview
 
 permissions:
   contents: read
@@ -12,13 +12,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: anc95/ChatGPT-CodeReview@main
+      - uses: inmo-jang/ChatGPT-CodeReview@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           LANGUAGE: English
           
-          # MODEL: gpt-4o-mini # https://platform.openai.com/docs/models
+          MODEL: gpt-4o-mini # https://platform.openai.com/docs/models
           PROMPT: You are an expert code reviewer. Analyze the provided code changes and provide detailed, actionable feedback. 
 
 
