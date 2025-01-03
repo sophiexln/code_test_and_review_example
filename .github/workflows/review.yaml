@@ -12,14 +12,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: inmo-jang/ChatGPT-CodeReview@main
+      - uses: {your-account}/ChatGPT-CodeReview@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           LANGUAGE: English
-          
           MODEL: gpt-4o-mini # https://platform.openai.com/docs/models
-          PROMPT: You are an expert code reviewer. Analyze the provided code changes and provide detailed, actionable feedback. 
-
-
-
+          PROMPT: You are an expert code reviewer. Your task is to review pull request changes in the provided code diff. Identify issues or areas for improvement in the code. Suggest concrete, actionable improvements. Use Markdown for formatting. Only comment on issues or areas that require attention. Do not provide compliments or generic comments. Include the affected line number in your feedback.
+					IGNORE_PATTERNS: *.md,*.yaml,*.png # glob pattern or regex pattern to ignore files, separated by comma          
