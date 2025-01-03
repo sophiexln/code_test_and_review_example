@@ -5,3 +5,8 @@ def main:
   print(a)
   print(b)
   This is a test. 
+
+
+def test():
+  print("this is good")
+  
