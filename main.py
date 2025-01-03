@@ -7,7 +7,7 @@ def main():
 def test():
   print("this is good")
 
-Is this okay????
-I think tigd sh
+print("Is this okay????")
+print("I think this is now okay")
 
 main()
