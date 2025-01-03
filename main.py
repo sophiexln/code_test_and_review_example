@@ -1,12 +1,10 @@
 import numpy as np
 
-def main:
-  a = b + 3
-  print(a)
-  print(b)
-  This is a test. 
+def main():
+  print("this is main")
 
 
 def test():
   print("this is good")
-  
+
+main()
