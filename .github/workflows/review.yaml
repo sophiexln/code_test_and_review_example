@@ -16,4 +16,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          LANGUAGE: Korean
+          LANGUAGE: English
+          
+          MODEL: gpt-4.0-mini # https://platform.openai.com/docs/models
+          PROMPT: You are an expert code reviewer. Analyze the provided code changes and provide detailed, actionable feedback. 
+
+
+
