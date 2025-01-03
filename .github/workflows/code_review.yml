@@ -1,26 +1,30 @@
-name: Code Review with OpenAI
+name: AI Code Review
 
 on:
   pull_request:
-    types:
-      - opened
-      - synchronize
-
+    types: [opened, synchronize]
 permissions: write-all
 
 jobs:
-  code_review:
+  review:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: AI Code Reviewer
-        uses: inmo-jang/ai-codereviewer@main
+      - uses: actions/checkout@v4
+      
+      - name: AI Code Review
+        uses: inmo-jang/ai-code-reviewer@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_API_MODEL: "gpt-4o-mini"
-          REVIEW_MAX_COMMENTS: 5 # Optional: defaults to 10
-          APPROVE_REVIEWS: true # Optional: defaults to false
-          exclude: "yarn.lock,dist/**"
+          
+          # Choose your AI provider and key
+          AI_PROVIDER: "openai" # or "anthropic" or "google"
+          AI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          AI_MODEL: "gpt-4o-mini"
+          AI_TEMPERATURE: 0.3 # 0 to 1 - higher values = more creativity and variance
+
+          # Optional configurations
+          APPROVE_REVIEWS: true
+          MAX_COMMENTS: 10 # 0 to disable
+          PROJECT_CONTEXT: "This is a Node.js TypeScript project"
+          CONTEXT_FILES: "package.json,README.md"
+          EXCLUDE_PATTERNS: "**/*.lock,**/*.json,**/*.md"
