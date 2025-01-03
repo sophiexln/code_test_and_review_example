@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       
       - name: AI Code Review
-        uses: inmo-jang/ai-code-reviewer@main
+        uses: inmo-jang/ai-codereviewer@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
