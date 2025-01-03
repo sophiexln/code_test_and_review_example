@@ -1,10 +1,10 @@
 name: AI Code Reviewer
 
 on:
-  push:
-    branches:
-      - main
-      - '**' # (옵션) 모든 브랜치 포함
+  # push:
+  #   branches:
+  #     - main
+  #     - '**' # (옵션) 모든 브랜치 포함
   pull_request:
     types:
       - opened
