@@ -1,4 +1,4 @@
-name: Code Review
+name: ChatGPT-CodeReview
 
 permissions:
   contents: read
@@ -16,6 +16,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          LANGUAGE: English
           MODEL: gpt-4o-mini # https://platform.openai.com/docs/models
           PROMPT: You are an expert code reviewer. Your task is to review pull request changes in the provided code diff. Identify issues or areas for improvement in the code. Suggest concrete, actionable improvements. Use Markdown for formatting. Only comment on issues or areas that require attention. Do not provide compliments or generic comments. Include the affected line number in your feedback.
           temperature: 0.3 # https://platform.openai.com/docs/api-reference/chat/create#chat/create-temperature
