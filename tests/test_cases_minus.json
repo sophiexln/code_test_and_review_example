@@ -1,0 +1,12 @@
+[
+    {"input": {"a": 10, "b": 5}, "expected": 5},
+    {"input": {"a": -5, "b": -5}, "expected": 0},
+    {"input": {"a": 0, "b": 0}, "expected": 0},
+    {"input": {"a": 123, "b": 23}, "expected": 100},
+    {"input": {"a": -100, "b": -200}, "expected": 100},
+    {"input": {"a": 1000000, "b": 1}, "expected": 999999},
+    {"input": {"a": 7, "b": 3}, "expected": 4},
+    {"input": {"a": 15, "b": 10}, "expected": 5},
+    {"input": {"a": 9, "b": 10}, "expected": -1},
+    {"input": {"a": 5, "b": -10}, "expected": 15}
+]

@@ -1,14 +1,3 @@
-# GPT_code_reviewer_test
+# Code Test and Code Review Example
 
-dddddagasdgg
-asdfasdfasdf
-asdfasdfasdf
-asdfasdfasdf
-asdfasdgasdgasdg
-asdgfasdgasdgasdg
-
-This repos is test. with GPT code review fucntion. 
-
-This is the readme.md
-This iss grammatically wrong. 
-asdfasdfasdf
+This repo provides examples of code test and AI-code review based on GitHub workflows. 
