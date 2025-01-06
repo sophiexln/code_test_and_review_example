@@ -1,12 +1,13 @@
 import numpy as np
+from functions import add
 
-def main:
-  a = b + 3
-  print(a)
-  print(b)
-  This is a test. 
+def main():
+  a = 1
+  b = 3
+  c = add(a,b)  
+  print(f"{a} plus {b} equals to {c}")
 
 
-def test():
-  print("this is good")
+if __name__ == "__main__":
+    main()
   
