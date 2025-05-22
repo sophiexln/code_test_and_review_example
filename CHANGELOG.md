@@ -3,7 +3,7 @@
 ### Added
 
 - Added `root(a, b)` function in `functions.py` to perform division.
-
+<!-- 5/22 -->
 # Changelog
 
 ## [1.0.0] - 2025-05-11
