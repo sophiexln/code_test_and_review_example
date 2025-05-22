@@ -8,4 +8,4 @@ def minus(a, b):
 
 def root(a, b):
     """Return the b-th root of a."""
-    return a + b
+    return a ** (1 / b)
