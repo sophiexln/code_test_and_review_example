@@ -7,5 +7,5 @@ def minus(a, b):
     return a - b
 
 def root(a, b):
-    """Return the b-th root of a."""
+    """Return the a-th root of b."""
     return a ** (1 / b)
