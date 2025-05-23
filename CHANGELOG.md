@@ -2,7 +2,11 @@
 
 ### Added
 
+- Added `root(a, b)` function in `functions.py` to perform root calculation.
+<!-- 5/22 -->
+
 - Added `divide(a, b)` function in `functions.py` to perform division.
+
 
 # Changelog
 
