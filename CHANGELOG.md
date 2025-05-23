@@ -1,3 +1,13 @@
+## [Unreleased]
+
+### Added
+
+- Added `root(a, b)` function in `functions.py` to perform root calculation.
+<!-- 5/22 -->
+
+- Added `divide(a, b)` function in `functions.py` to perform division.
+
+
 # Changelog
 
 ## [1.0.0] - 2025-05-11
