@@ -2,10 +2,13 @@
 
 ### Added
 
-- Added `root(a, b)` function in `functions.py` to perform root calculation.
 <!-- 5/22 -->
-
+- Added `root(a, b)` function in `functions.py` to perform root calculation.
 - Added `divide(a, b)` function in `functions.py` to perform division.
+
+  
+<!-- 5/23 -->
+- Added `multiply(a, b)` function in `functions.py` to perform multiplication.
 
 
 # Changelog
@@ -24,4 +27,3 @@
 - Set up GitHub Actions workflows for automated testing and code review.
 - Created `requirements.txt` for managing project dependencies.
 - Provided `README.md` with basic project information and setup instructions.
-- Added `multiply(a, b)` function in `functions.py` to perform multiplication.
